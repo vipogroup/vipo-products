@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIPO - קטלוג מוצרים לרכישה קבוצתית</title>
+    
+    <!-- Bootstrap RTL -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <!-- Google Fonts - Heebo -->
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container py-5">
+        <header class="text-center mb-5 animate__animated animate__fadeIn">
+            <h1 class="fw-bold">מוצרים לרכישה קבוצתית</h1>
+            <p class="text-secondary">בחרו את המוצרים שמעניינים אתכם לרכישה קבוצתית</p>
+        </header>
+        
+        <!-- פילטרים -->
+        <div class="filters mb-4 animate__animated animate__fadeIn animate__delay-1s">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <div class="input-group search-group">
+                        <input type="text" class="form-control" placeholder="חיפוש מוצרים...">
+                        <button class="btn btn-primary" type="button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="d-flex justify-content-md-end">
+                        <div class="dropdown me-2">
+                            <button class="btn btn-outline-primary dropdown-toggle" type="button" id="categoryDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                קטגוריה
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="categoryDropdown">
+                                <li><a class="dropdown-item" href="#">הכל</a></li>
+                                <li><a class="dropdown-item" href="#">אלקטרוניקה</a></li>
+                                <li><a class="dropdown-item" href="#">מוצרי חשמל</a></li>
+                                <li><a class="dropdown-item" href="#">ריהוט</a></li>
+                                <li><a class="dropdown-item" href="#">מזון</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown">
+                            <button class="btn btn-outline-primary dropdown-toggle" type="button" id="sortDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                מיון
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="sortDropdown">
+                                <li><a class="dropdown-item" href="#">פופולריות</a></li>
+                                <li><a class="dropdown-item" href="#">מחיר - מהנמוך לגבוה</a></li>
+                                <li><a class="dropdown-item" href="#">מחיר - מהגבוה לנמוך</a></li>
+                                <li><a class="dropdown-item" href="#">חדש ביותר</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- רשימת המוצרים -->
+        <div class="row g-4">
+            <!-- מוצר 1 -->
+            <div class="col-6 col-lg-4 col-xl-3 animate__animated animate__fadeInUp">
+                <a href="product-details.html?id=1" class="product-card-link">
+                    <div class="card product-card h-100">
+                        <div class="product-badge">חדש</div>
+                        <!-- מבנה אופקי למובייל -->
+                        <div class="row g-0 h-100">
+                            <div class="col-5 d-block d-lg-none">
+                                <div class="product-image-wrapper-mobile">
+                                    <img src="https://via.placeholder.com/300x300" class="product-image-mobile" alt="מוצר 1">
+                                </div>
+                            </div>
+                            <div class="col-7 d-block d-lg-none">
+                                <div class="card-body-mobile">
+                                    <h6 class="card-title-mobile">טלוויזיה חכמה "55</h6>
+                                    <div class="product-category-mobile">אלקטרוניקה</div>
+                                    <div class="price-container-mobile">
+                                        <div class="group-price-mobile">₪2,499</div>
+                                        <div class="discount-badge-mobile">-29%</div>
+                                    </div>
+                                    <div class="participants-mobile">
+                                        <div class="progress-mobile">
+                                            <div class="progress-bar" style="width: 75%"></div>
+                                        </div>
+                                        <div class="participants-text-mobile">15/20</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- מבנה רגיל לטאבלט ומחשב -->
+                        <div class="d-none d-lg-block">
+                            <div class="product-image-wrapper">
+                                <img src="https://via.placeholder.com/300x300" class="card-img-top product-image" alt="מוצר 1">
+                                <div class="product-overlay">
+                                    <span class="btn-view">לפרטים נוספים <i class="fas fa-arrow-left me-1"></i></span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">טלוויזיה חכמה "55</h5>
+                                <div class="product-meta">
+                                    <div class="product-category">אלקטרוניקה</div>
+                                    <div class="product-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        <span class="rating-count">(42)</span>
+                                    </div>
+                                </div>
+                                <div class="price-container">
+                                    <div class="price-info">
+                                        <div class="regular-price">₪3,499</div>
+                                        <div class="group-price">₪2,499</div>
+                                    </div>
+                                    <div class="discount-badge">-29%</div>
+                                </div>
+                                <div class="participants-info">
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="participants-text">
+                                        <span class="current">15</span> מתוך <span class="required">20</span> משתתפים
+                                    </div>
+                                    <div class="time-left">
+                                        <i class="far fa-clock"></i> נותרו 3 ימים
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- מוצר 2 -->
+            <div class="col-sm-6 col-lg-4 col-xl-3 animate__animated animate__fadeInUp" style="animation-delay: 0.1s;">
+                <a href="product-details.html?id=2" class="product-card-link">
+                    <div class="card product-card h-100">
+                        <div class="product-badge hot">חם</div>
+                        <div class="product-image-wrapper">
+                            <img src="https://via.placeholder.com/300x300" class="card-img-top product-image" alt="מוצר 2">
+                            <div class="product-overlay">
+                                <span class="btn-view">לפרטים נוספים <i class="fas fa-arrow-left me-1"></i></span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">מכונת כביסה 9 ק"ג</h5>
+                            <div class="product-meta">
+                                <div class="product-category">מוצרי חשמל</div>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span class="rating-count">(78)</span>
+                                </div>
+                            </div>
+                            <div class="price-container">
+                                <div class="price-info">
+                                    <div class="regular-price">₪2,990</div>
+                                    <div class="group-price">₪1,990</div>
+                                </div>
+                                <div class="discount-badge">-33%</div>
+                            </div>
+                            <div class="participants-info">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="participants-text">
+                                    <span class="current">18</span> מתוך <span class="required">20</span> משתתפים
+                                </div>
+                                <div class="time-left">
+                                    <i class="far fa-clock"></i> נותרו 2 ימים
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- מוצר 3 -->
+            <div class="col-sm-6 col-lg-4 col-xl-3 animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+                <a href="product-details.html?id=3" class="product-card-link">
+                    <div class="card product-card h-100">
+                        <div class="product-image-wrapper">
+                            <img src="https://via.placeholder.com/300x300" class="card-img-top product-image" alt="מוצר 3">
+                            <div class="product-overlay">
+                                <span class="btn-view">לפרטים נוספים <i class="fas fa-arrow-left me-1"></i></span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">סט רהיטים לסלון</h5>
+                            <div class="product-meta">
+                                <div class="product-category">ריהוט</div>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span class="rating-count">(24)</span>
+                                </div>
+                            </div>
+                            <div class="price-container">
+                                <div class="price-info">
+                                    <div class="regular-price">₪7,500</div>
+                                    <div class="group-price">₪5,250</div>
+                                </div>
+                                <div class="discount-badge">-30%</div>
+                            </div>
+                            <div class="participants-info">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="participants-text">
+                                    <span class="current">10</span> מתוך <span class="required">20</span> משתתפים
+                                </div>
+                                <div class="time-left">
+                                    <i class="far fa-clock"></i> נותרו 5 ימים
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- מוצר 4 -->
+            <div class="col-sm-6 col-lg-4 col-xl-3 animate__animated animate__fadeInUp" style="animation-delay: 0.3s;">
+                <a href="product-details.html?id=4" class="product-card-link">
+                    <div class="card product-card h-100">
+                        <div class="product-badge almost-gone">אוזל</div>
+                        <div class="product-image-wrapper">
+                            <img src="https://via.placeholder.com/300x300" class="card-img-top product-image" alt="מוצר 4">
+                            <div class="product-overlay">
+                                <span class="btn-view">לפרטים נוספים <i class="fas fa-arrow-left me-1"></i></span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">מחשב נייד גיימינג</h5>
+                            <div class="product-meta">
+                                <div class="product-category">אלקטרוניקה</div>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span class="rating-count">(56)</span>
+                                </div>
+                            </div>
+                            <div class="price-container">
+                                <div class="price-info">
+                                    <div class="regular-price">₪5,999</div>
+                                    <div class="group-price">₪4,599</div>
+                                </div>
+                                <div class="discount-badge">-23%</div>
+                            </div>
+                            <div class="participants-info">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="participants-text">
+                                    <span class="current">19</span> מתוך <span class="required">20</span> משתתפים
+                                </div>
+                                <div class="time-left">
+                                    <i class="far fa-clock"></i> נותר יום אחד
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- מוצר 5 -->
+            <div class="col-sm-6 col-lg-4 col-xl-3 animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
+                <a href="product-details.html?id=5" class="product-card-link">
+                    <div class="card product-card h-100">
+                        <div class="product-image-wrapper">
+                            <img src="https://via.placeholder.com/300x300" class="card-img-top product-image" alt="מוצר 5">
+                            <div class="product-overlay">
+                                <span class="btn-view">לפרטים נוספים <i class="fas fa-arrow-left me-1"></i></span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">מקרר 4 דלתות</h5>
+                            <div class="product-meta">
+                                <div class="product-category">מוצרי חשמל</div>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span class="rating-count">(31)</span>
+                                </div>
+                            </div>
+                            <div class="price-container">
+                                <div class="price-info">
+                                    <div class="regular-price">₪8,990</div>
+                                    <div class="group-price">₪6,990</div>
+                                </div>
+                                <div class="discount-badge">-22%</div>
+                            </div>
+                            <div class="participants-info">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="participants-text">
+                                    <span class="current">12</span> מתוך <span class="required">20</span> משתתפים
+                                </div>
+                                <div class="time-left">
+                                    <i class="far fa-clock"></i> נותרו 4 ימים
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- מוצר 6 -->
+            <div class="col-sm-6 col-lg-4 col-xl-3 animate__animated animate__fadeInUp" style="animation-delay: 0.5s;">
+                <a href="product-details.html?id=6" class="product-card-link">
+                    <div class="card product-card h-100">
+                        <div class="product-badge">חדש</div>
+                        <div class="product-image-wrapper">
+                            <img src="https://via.placeholder.com/300x300" class="card-img-top product-image" alt="מוצר 6">
+                            <div class="product-overlay">
+                                <span class="btn-view">לפרטים נוספים <i class="fas fa-arrow-left me-1"></i></span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">סט סירים מקצועי</h5>
+                            <div class="product-meta">
+                                <div class="product-category">מטבח</div>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span class="rating-count">(47)</span>
+                                </div>
+                            </div>
+                            <div class="price-container">
+                                <div class="price-info">
+                                    <div class="regular-price">₪1,200</div>
+                                    <div class="group-price">₪799</div>
+                                </div>
+                                <div class="discount-badge">-33%</div>
+                            </div>
+                            <div class="participants-info">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="participants-text">
+                                    <span class="current">8</span> מתוך <span class="required">20</span> משתתפים
+                                </div>
+                                <div class="time-left">
+                                    <i class="far fa-clock"></i> נותרו 7 ימים
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- מוצר 7 -->
+            <div class="col-sm-6 col-lg-4 col-xl-3 animate__animated animate__fadeInUp" style="animation-delay: 0.6s;">
+                <a href="product-details.html?id=7" class="product-card-link">
+                    <div class="card product-card h-100">
+                        <div class="product-badge hot">חם</div>
+                        <div class="product-image-wrapper">
+                            <img src="https://via.placeholder.com/300x300" class="card-img-top product-image" alt="מוצר 7">
+                            <div class="product-overlay">
+                                <span class="btn-view">לפרטים נוספים <i class="fas fa-arrow-left me-1"></i></span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">רובוט שואב אבק חכם</h5>
+                            <div class="product-meta">
+                                <div class="product-category">מוצרי חשמל</div>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span class="rating-count">(63)</span>
+                                </div>
+                            </div>
+                            <div class="price-container">
+                                <div class="price-info">
+                                    <div class="regular-price">₪2,499</div>
+                                    <div class="group-price">₪1,699</div>
+                                </div>
+                                <div class="discount-badge">-32%</div>
+                            </div>
+                            <div class="participants-info">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="participants-text">
+                                    <span class="current">17</span> מתוך <span class="required">20</span> משתתפים
+                                </div>
+                                <div class="time-left">
+                                    <i class="far fa-clock"></i> נותרו 2 ימים
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- מוצר 8 -->
+            <div class="col-sm-6 col-lg-4 col-xl-3 animate__animated animate__fadeInUp" style="animation-delay: 0.7s;">
+                <a href="product-details.html?id=8" class="product-card-link">
+                    <div class="card product-card h-100">
+                        <div class="product-image-wrapper">
+                            <img src="https://via.placeholder.com/300x300" class="card-img-top product-image" alt="מוצר 8">
+                            <div class="product-overlay">
+                                <span class="btn-view">לפרטים נוספים <i class="fas fa-arrow-left me-1"></i></span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">מצלמה דיגיטלית מקצועית</h5>
+                            <div class="product-meta">
+                                <div class="product-category">אלקטרוניקה</div>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span class="rating-count">(29)</span>
+                                </div>
+                            </div>
+                            <div class="price-container">
+                                <div class="price-info">
+                                    <div class="regular-price">₪4,200</div>
+                                    <div class="group-price">₪3,150</div>
+                                </div>
+                                <div class="discount-badge">-25%</div>
+                            </div>
+                            <div class="participants-info">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="participants-text">
+                                    <span class="current">11</span> מתוך <span class="required">20</span> משתתפים
+                                </div>
+                                <div class="time-left">
+                                    <i class="far fa-clock"></i> נותרו 6 ימים
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        <!-- פגינציה -->
+        <nav class="mt-5">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
